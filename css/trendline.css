@@ -1,0 +1,38 @@
+        .tick text,
+        .legendCells text {
+            fill: #111111;
+            font-size: 7pt;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .axis-label,
+        .legend-label {
+            fill: #AAAAAA;
+            font-size: 7pt;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .subtitle {
+            font-size: 5pt;
+            font-family: 'Open Sans', sans-serif;
+            alignment-baseline: middle;
+            fill: #001f3f;
+        }
+
+        circle:hover {
+            fill: #F012BE;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            vertical-align: middle;
+            line-height: 30px;
+            font-family: 'Open Sans', sans-serif;
+            background: #FFDC00;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }

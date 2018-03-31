@@ -1,0 +1,654 @@
+/*
+Framework: Epsilon 1.0.1
+Author: Enabled
+Author URL: http://paultrifa.com
+Description: Custom Mobile Framwork Available Exclusively on ThemeForest and in Enabled/CosminCotor developer projects!
+Version: 1.0.130204
+License: You MAY NOT resell / include in personal or commercial projects.
+License Restrictions: You are not allowed to remove these comments, or take credit for this framework!
+*/
+
+.content{
+	margin-left:15px;
+	margin-right:15px;
+}
+
+.container{	
+	margin-bottom:20px;
+}
+
+body{
+	background-image:url(../images/body-bg.png);
+	-webkit-font-smoothing: antialiased;
+	overflow-x:hidden;
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*---Framework CSS Images And Editable Styles - Epsilon v1.0----*/
+/*//////////////////////////////////////////////////////////////*/
+
+h1, h2, h3, h4, h5, h6		{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+
+h1 > a						{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+h2 > a						{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+h3 > a						{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+h4 > a						{	color:#373737;		font-family: 'Open Sans', sans-serif;		}
+h5 > a						{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+h6 > a						{	color:#373737; 		font-family: 'Open Sans', sans-serif;		}
+
+span						{	color:#8a8a8a;		font-family: 'Open Sans', sans-serif;	}
+body						{	color:#6b6b6b;		font-family: 'Open Sans', sans-serif;	}
+input						{						font-family: 'Open Sans', sans-serif;}
+li, ul						{	color:#8a8a8a;		}
+a							{	color:#e34e47;		}
+em							{	color:#8a8a8a;		}
+blockquote					{	color:#8a8a8a!important;}
+.filtrable-caption			{	color:#8a8a8a;}
+.portfolio-tem-full-width a	{	color:#8a8a8a;}
+.portfolio-item-thumb a		{	color:#8a8a8a;}
+.dropcaps					{	color:#333333;}
+.field-title				{	color:#333333;}
+.shadow{						text-shadow:0px 1px 0px #FFFFFF;}
+
+/*////////////////////////////////*/
+/*----Background Color Styles-----*/
+/*////////////////////////////////*/
+.icon{			background-color:#262428;										}
+.bg-orange{		background-color:#e34e47;			color:#FFFFFF!important;	}
+.bg-yellow{		background-color:#ffd100;			color:inherit;				}
+.bg-green{		background-color:#518900;			color:#FFFFFF!important;	}
+.bg-gray{		background-color:#424242;			color:#FFFFFF!important;	}
+.bg-light-gray{	background-color:rgba(0,0,0,0.1); 	color:#333333!important;	}
+.bg-dark-gray{	background-color:rgba(0,0,0,0.7);	color:#FFFFFF!important;	}
+.bg-light{		background-color:rgba(0,0,0,0.05);  color:#333333!important;	}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Quotes Style--------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+
+.quote em{			font-family:'Open Sans', sans-serif;	font-weight:400;	font-size:12px;	display:block;	line-height:18px;}
+.quote strong{		font-size:10px;							display:block;		text-align:right;}
+.quote-icon{		font-family:'Open Sans', sans-serif;	font-weight:400;	font-size:12px;	line-height:18px;	margin-top:10px;}
+.quote-icon em span{										margin-right:10px;	float:left; margin-top:3px;}
+.quote-icon strong{											display:block;		text-align:right;	font-size:10px;}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Toggle Style 5------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.show-toggle-v5{		background-image:url(../images/ui/minus.png);					}
+.hide-toggle-v5{		background-image:url(../images/ui/plus.png);					}
+
+.toggle-v5 a{			color:#999999!important; font-family:'Open Sans', sans-serif!important; font-weight:400!important; font-size:14px; text-transform:uppercase;	}
+.toggle-container-v5{	background-color:#FFFFFF; color:#9a9a9a!important;	}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Toggle Style 4------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.show-toggle-v4{		background-image:url(../images/lists/delete_16.png);			}
+.hide-toggle-v4{		background-image:url(../images/lists/plus_16.png);				}
+
+.toggle-v4 a{			color:#999999!important; font-family:'Open Sans', sans-serif!important; font-weight:400!important;	font-size:14px; text-transform:uppercase;	}
+.toggle-container-v4{	background-color:#FFFFFF; color:#9a9a9a!important;	}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Toggle Style 3------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.show-toggle-v3{		background-image:url(../images/ui/switch-on.png); 				}
+.hide-toggle-v3{		background-image:url(../images/ui/switch-off.png);				}
+
+.toggle-v3 a{			color:#999999!important; font-family:'Open Sans', sans-serif!important; font-weight:400!important; font-size:14px; text-transform:uppercase;	}
+.toggle-container-v3{	background-color:#FFFFFF; color:#9a9a9a!important;	}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Toggle Style 2------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.show-toggle-v2{		background-image:url(../images/lists/delete_16.png);			}
+.hide-toggle-v2{		background-image:url(../images/lists/plus_16.png);				}
+
+.toggle-v2 a{			color:#999999!important; font-family:'Open Sans', sans-serif!important; font-weight:400!important; font-size:14px; text-transform:uppercase;	}
+.toggle-container-v2{	background-color:#FFFFFF; color:#9a9a9a!important;	}
+		
+/*/////////////////////////////////////////////////////////////////////////////////////*/		
+/*-----------------------------Toggle Style 1------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.show-toggle-v1{	background-image:url(../images/ui/minus.png);						}
+.hide-toggle-v1{	background-image:url(../images/ui/plus.png);						}
+
+.toggle-v1 a{			color:#999999!important; font-family:'Open Sans', sans-serif!important; font-weight:400!important;	font-size:14px; text-transform:uppercase;	}
+.toggle-container-v1{	background-color:#FFFFFF; color:#9a9a9a!important;	}
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------Checkboxes and Radios--------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+.checker{			color:#9a9a9a!important;}
+.checkbox-v1{		background-image:url(../images/ui/checkbox.png);					}
+.checked-v1{		background-image:url(../images/ui/checkbox-selected.png)!important; }
+.checkbox-v2{		background-image:url(../images/ui/checkbox2.png);					}
+.checked-v2{		background-image:url(../images/ui/checkbox2-selected.png)!important;}
+.checkbox-v3{		background-image:url(../images/ui/empty.png);						}
+.checked-v3{		background-image:url(../images/ui/cross.png)!important;				}
+.checkbox-v4{		background-image:url(../images/ui/empty.png);						}
+.checked-v4{		background-image:url(../images/ui/tick.png)!important;				}
+.radio-v1{			background-image:url(../images/ui/radio.png);						}
+.balled-v1{			background-image:url(../images/ui/radio-selected.png)!important;	}
+.radio-v2{			background-image:url(../images/ui/radio2.png);						}
+.balled-v2{			background-image:url(../images/ui/radio2-selected.png)!important;	}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*---------------------------------List Icons-------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.demo{	margin-left:3px;	margin-bottom:3px;}
+.list-address{		background-image:url(../images/lists/address_16.png);		}
+.list-block{		background-image:url(../images/lists/block_16.png);			}
+.list-bookmark{		background-image:url(../images/lists/bookmark_16.png);		}
+.list-briefcase{	background-image:url(../images/lists/briefcase_16.png);		}
+.list-bubble{		background-image:url(../images/lists/bubble_16.png);		}
+.list-buy{			background-image:url(../images/lists/buy_16.png);			}
+.list-calendar{		background-image:url(../images/lists/calendar_16.png);		}
+.list-clipboard{	background-image:url(../images/lists/clipboard_16.png);		}
+.list-delete{		background-image:url(../images/lists/delete_16.png);		}
+.list-clock{		background-image:url(../images/lists/clock_16.png);			}
+.list-diagram{		background-image:url(../images/lists/diagram_16.png);		}
+.list-document{		background-image:url(../images/lists/document_16.png);		}
+.list-down{			background-image:url(../images/lists/down_16.png);			}
+.list-flag{			background-image:url(../images/lists/flag_16.png);			}
+.list-folder{		background-image:url(../images/lists/folder_16.png);		}
+.list-gear{			background-image:url(../images/lists/gear_16.png);			}
+.list-globe{		background-image:url(../images/lists/globe_16.png);			}
+.list-heart{		background-image:url(../images/lists/heart_16.png);			}
+.list-help{			background-image:url(../images/lists/help_16.png);			}
+.list-home{			background-image:url(../images/lists/home_16.png);			}
+.list-key{			background-image:url(../images/lists/key_16.png);			}
+.list-label{		background-image:url(../images/lists/label_16.png);			}
+.list-left{			background-image:url(../images/lists/left_16.png);			}
+.list-letter{		background-image:url(../images/lists/letter_16.png);		}
+.list-monitor{		background-image:url(../images/lists/monitor_16.png);		}
+.list-pencil{		background-image:url(../images/lists/pencil_16.png);		}
+.list-plus{			background-image:url(../images/lists/plus_16.png);			}
+.list-present{		background-image:url(../images/lists/present_16.png);		}
+.list-print{		background-image:url(../images/lists/print_16.png);			}
+.list-right{		background-image:url(../images/lists/right_16.png);			}
+.list-save{			background-image:url(../images/lists/save_16.png);			}
+.list-shield{		background-image:url(../images/lists/shield_16.png);		}
+.list-statistics{	background-image:url(../images/lists/statistics_16.png);	}
+.list-stop{			background-image:url(../images/lists/stop_16.png);			}
+.list-tick{			background-image:url(../images/lists/tick_16.png);			}
+.list-trash{		background-image:url(../images/lists/trash_16.png);			}
+.list-up{			background-image:url(../images/lists/up_16.png);			}
+.list-user{			background-image:url(../images/lists/user_16.png);			}
+.list-walet{		background-image:url(../images/lists/wallet_16.png);		}
+.list-warning{		background-image:url(../images/lists/warning_16.png);		}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-------------------------Header Notification------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+.header-notification{			background-color:#000000;	font-size:12px;	text-align:left;	color:#FFFFFF;}
+.header-notification strong{ 	color:#666;}
+.warning-notification em{		background-image:url(../images/lists/warning_16.png);}
+.close-notification em{			background-image:url(../images/lists/delete_16.png);}
+.heart-notification em{			background-image:url(../images/lists/heart_16.png);}
+.calendar-notification em{		background-image:url(../images/lists/calendar_16.png);}
+.info-notification em{			background-image:url(../images/lists/info_16.png);}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-------------------------------CSS3 Buttons-------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.fullscreen-button{
+	width:99%;
+	box-sizing:border-box;
+	display:block;
+	text-align:center;
+}
+
+.button, .button-minimal{
+	margin-top:10px;
+	margin-bottom:20px;	
+}
+
+
+.demo-button{
+	margin-right:3px;
+	margin-left:3px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*---------------------------Regular Image Slider---------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.slider-heading{
+	color:#808080;	
+	padding-bottom:10px;
+	margin-top:-10px;
+	line-height:20px;
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+.slider-wrapper{
+	display:block!important;
+	max-width:100%!important;
+	height:auto;
+	border:solid 1px rgba(0,0,0,0.2);
+}
+
+.slider-container{
+	display:block!important;
+	max-width:100%!important;
+	border:solid 4px #FFFFFF;
+}
+
+.swipe-img{
+	height:auto;
+	width:100%!important;
+	display:block!important;
+}
+
+.swipe-text{
+	font-size:10px!important;
+	color:#FFFFFF;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-shadow:none;
+	color:#FFF!important;
+	position:relative;
+	padding-top:6px;
+	z-index:9999;
+	margin-top:-50px;
+	padding-bottom:15px;
+	font-weight:400;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------Mobile Detectors--------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////////*/
+
+.no-detected-background{background-image:none!important;}
+.iphone-detected{	background-image:url(../images/icon/mobile/iphone4.png); 				background-size:45px 45px; background-position:4px 4px!important;	background-repeat:no-repeat;}
+.ipod-detected{		background-image:url(../images/icon/electrical/ipodclassic.png);	    background-size:45px 45px; background-position:4px 4px!important;	background-repeat:no-repeat;}
+.android-detected{	background-image:url(../images/icon/mobile/android.png);	   			background-size:45px 45px; background-position:4px 4px!important;	background-repeat:no-repeat;}
+.ipad-detected{		background-image:url(../images/icon/electrical/ipad2.png);	   			background-size:45px 45px; background-position:4px 4px!important;	background-repeat:no-repeat;}
+
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*----------------------------Classic Notifications------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+.small-notification{	margin-bottom:20px;	}
+
+.green-notification p{		background-image:url(../images/lists/tick_16.png);	background-repeat:no-repeat;		display:inline-block;	height:16px;	padding-left:30px;	color:#060;}
+.red-notification p{		background-image:url(../images/lists/delete_16.png);	background-repeat:no-repeat;	display:inline-block;	height:16px;	padding-left:30px;	color:#C00;}
+.blue-notification p{		background-image:url(../images/lists/info_16.png);	background-repeat:no-repeat;	display:inline-block;	height:16px;	padding-left:30px;	color:#039;}
+.yellow-notification p{		background-image:url(../images/lists/warning_16.png);	background-repeat:no-repeat;	display:inline-block;	height:16px;	padding-left:30px;	color:#F90;}
+
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------Big Notifications--------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+
+
+.red-box{		background-color:#ffdcdd;	border:1px solid #e9b9bb;}
+.red-box a{ 	color:#8d4345; font-weight:bold; padding-top:3px;}
+.red-box h4{	color:#8d4345; font-weight:400; font-size:14px; text-shadow:none;}
+.red-box p{		color:#c19597;	border-top: 1px solid #e9b9bb; padding-top:15px; margin-top:8px;}
+
+.yellow-box{	background-color:#fffcdc;	border:1px solid #e9e1b9;}
+.yellow-box a{ 	color:#c2b925; font-weight:bold; padding-top:3px;}
+.yellow-box h4{	color:#c2b925; font-weight:400; font-size:14px;  text-shadow:none;}
+.yellow-box p{	color:#ccc894;	border-top: 1px solid #e9e1b9; padding-top:15px; margin-top:8px;}
+
+.green-box{		background-color:#e3ffdc;	border:1px solid #d9e9b9;}
+.green-box a{ 	color:#7b8a77; font-weight:bold; padding-top:3px;}
+.green-box h4{	color:#7b8a77; font-weight:400; font-size:14px;  text-shadow:none;}
+.green-box p{	color:#abc0a6;	border-top: 1px solid #d9e9b9; padding-top:15px; margin-top:8px;}
+
+.blue-box{		background-color:#dcf9ff;	border:1px solid #b9d9e9;}
+.blue-box a{ 	color:#90a9b2; font-weight:bold; padding-top:3px;}
+.blue-box h4{	color:#90a9b2; font-weight:400; font-size:14px;  text-shadow:none;}
+.blue-box p{	color:#90a9b2;	border-top: 1px solid #b9d9e9; padding-top:15px; margin-top:8px;}
+
+
+
+/*/////////////////////////////////////////////*/
+/*------------------Twitter--------------------*/
+/*/////////////////////////////////////////////*/
+
+
+#twitter-feed {
+	font-size: 10px;
+	color: #333333;
+}
+
+#twitter-feed .tweet {
+	border-bottom: 1px dotted #ccc;
+}
+
+#twitter-feed .tweet .time {
+	font-size: 10px;
+	font-style: italic;
+	color: #666666;
+}
+
+#twitter-feed h1{margin-bottom:-10px;}
+#twitter-feed h2{margin-bottom:-10px;}
+#twitter-feed h3{margin-bottom:-10px;}
+#twitter-feed h4{margin-bottom:-10px;}
+#twitter-feed h5{margin-bottom:-10px;}
+
+/*/////////////////////////////////////////////*/
+/*-------------Contact Form--------------------*/
+/*/////////////////////////////////////////////*/
+
+.contactField{
+	background-color:rgba(255,255,255,0.4);
+	font-size:12px;
+	color:#666;
+	border:solid 1px #cacaca;
+}
+
+.contactTextarea{
+	background-color:rgba(255,255,255,0.4);
+	font-size:12px;
+	border:solid 1px #cacaca;
+	color: #666;
+}
+
+/*/////////////////////////////////////////////*/
+/*-------------Sign In Form--------------------*/
+/*/////////////////////////////////////////////*/
+
+.sign-in-form{
+	background-color:#FFFFFF;
+	border:solid 1px #cacaca;
+	-webkit-box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 		inset 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom:20px;
+}
+
+.username-password-field{
+	width:100%;
+	display:block;
+	border:solid 1px #cacaca;
+	margin-bottom:10px;
+	height:30px;
+	font-size:12px;
+	padding-left:10px;
+	padding-right:10px;
+	color:#9a9a9a;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------Page Divider---------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.decoration{
+	margin-bottom:20px;
+	height:1px;
+	display:block;
+	background-color:rgba(0,0,0,0.15);
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------Pre Styling----------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.code{
+	border:solid 1px #cacaca;
+	font-size:12px;
+	margin-bottom:30px;
+}
+
+.wline{
+	display:block;
+	background-color:#FFFFFF;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+.code > span:last-child{
+	border-bottom:none;
+}
+
+.gline{
+	border-top:solid 1px rgba(0,0,0,0.1);
+	border-bottom:solid 1px rgba(0,0,0,0.1);
+	display:block;
+	background-color:#f1f1f1;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:8px;
+	padding-bottom:8px;
+}	
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------Portfolio Styles-----------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Filtrable Styles*/
+
+.filtrable-caption{
+	font-size:10px!important;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-bottom:0px!important;
+	text-align:center;
+	background-color:#3c3c3c;
+	text-transform:uppercase;
+}
+
+.gallery-filtrable{
+	margin-top:10px;
+}
+
+.filtrable-button{
+	font-size:11px;
+	text-decoration:none;
+	display:inline;
+	padding-right:5px;
+	padding-left:5px;
+}
+
+.filtrable-button:hover{
+	text-decoration:underline;
+}
+
+
+/*Fullwidth portfolio Styles*/
+
+.portfolio-item-full-width a{
+	background-color:#FFFFFF;
+	padding:5px;
+	border:solid 1px #cacaca;
+	font-size:10px;
+	text-align:center;
+	line-height:18px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+}
+
+.filtrable-caption{
+	color:#FFFFFF;
+}
+
+/*Thumbnail Portfolio Styles*/
+
+.portfolio-item-thumb a{
+	background-color:#FFFFFF;
+	padding:5px;
+	border:solid 1px #cacaca;
+	text-align:center;
+	font-size:10px;
+	line-height:18px;
+	margin-bottom:10px;
+	text-transform:uppercase;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------Blog Posts-----------------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media screen and (orientation:portrait) {
+	.post-image img{	display:block;	max-width:100%;	}
+}
+
+@media screen and (orientation:landscape) {
+	.post-image{		float:left;		width:130px;		margin-right:10px;	}
+}
+
+.post-details{
+	display:block;
+	width:100%;
+}
+
+.blog-post-image{
+	margin-top:10px;
+	margin-bottom:10px;
+	display:block;
+	max-width:100%;
+	overflow:visible!important;
+	background-color:#FFFFFF;
+	padding:4px;
+	border:solid 1px #cacaca;
+}
+
+.blog-post p{
+	margin-bottom:10px;
+}
+
+
+.posted-by{
+	background-image:url(../images/blog/user.png);
+	background-repeat:no-repeat;
+	background-position:0px 4px;
+	padding-right:20px;
+	padding-left:25px;
+	margin-bottom:5px;
+	font-size:10px;
+	float:left;
+	color:#333;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.posted-at{
+	background-image:url(../images/blog/time.png);
+	background-repeat:no-repeat;
+	background-position:0px 4px;
+	padding-right:20px;
+	padding-left:25px;
+	margin-bottom:5px;
+	font-size:10px;
+	float:left;
+	color:#333;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.posted-cat{
+	background-image:url(../images/blog/cat.png);
+	background-repeat:no-repeat;
+	background-position:0px 4px;
+	padding-right:20px;
+	padding-left:25px;
+	margin-bottom:5px;
+	font-size:10px;
+	float:left;
+	color:#333;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.posted-tag{
+	background-image:url(../images/blog/tag.png);
+	background-repeat:no-repeat;
+	background-position:0px 4px;
+	padding-right:20px;
+	padding-left:25px;
+	margin-bottom:5px;
+	font-size:10px;
+	float:left;
+	color:#333;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.posted-more{
+	background-image:url(../images/blog/more.png);
+	background-repeat:no-repeat;
+	background-position:0px 4px;
+	padding-right:20px;
+	padding-left:25px;
+	margin-bottom:5px;
+	font-size:10px;
+	float:left;
+	color:#333;
+	text-shadow:0px 1px 0px #FFFFFF;
+}
+
+.ads img{
+	background-color:#FFFFFF;
+	padding:3px;
+	border:solid 1px #cacaca;
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:10px;
+}
+
+.ads{
+	width:290px;
+	margin:auto;
+}
+
+.recent-post img{
+	width:90px;
+	height:90px;
+	background-color:#FFFFFF;
+	padding:3px;
+	border:solid 1px #cacaca;
+	float:left;
+	margin-right:10px;
+}
+
+.recent-post strong{
+	display:inline-block;
+	padding-bottom:5px;
+	font-size:14px;
+	
+}
+
+.recent-post a{
+	padding-top:5px;
+	display:inline-block;
+	float:right;
+}
+
+
+/*///////////////////////////*/
+/*-------Speach Bubble------*/
+/*///////////////////////////*/
+
+
+.speach-left{	background-color:#FFFFFF;	border:solid 1px #cacaca;}
+.speach-right{	background-color:#FFFFFF;	border:solid 1px #cacaca;}
+
+.speach-left-title{		color:#000000;	text-shadow:0px 1px 0px #FFFFFF;}
+.speach-right-title{	color:#000000;	text-shadow:0px 1px 0px #FFFFFF;}
+
+/*/////////////////////////////////////////////////////////////*/
+/*---------------------DROPDOWN MENU---------------------------*/
+/*/////////////////////////////////////////////////////////////*/
+
+.dropdown-deploy{	color:#333333;	background-color:#FFFFFF;	background-repeat:no-repeat;		border:solid 1px #cacaca;	border-bottom:none!important;}
+.dropdown-hidden{	color:#333333;	background-color:#FFFFFF;	background-repeat:no-repeat;		border:solid 1px #cacaca;	border-bottom:none!important;}
+.dropdown-item{		background-color:#FFFFFF; border:solid 1px #cacaca;	border-bottom:none!important;}
+
+
+
+.responsive-video{
+	display:block;
+	width:100%;
+}

@@ -1,0 +1,59 @@
+body {
+	font: 10px sans-serif;
+	background-color: #222;
+	color: #fff;
+}
+
+#chart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.axis {
+	text {
+		fill: #fff;
+	}
+	path, line {
+		fill: none;
+		stroke: #fff;
+		stroke-width: 1px;
+		shape-rendering: crispEdges;
+	}
+}
+
+.x.axis path {
+	//display: none;
+}
+
+.region text {
+	//fill: #fff;
+}
+
+.line {
+	fill: none;
+	stroke: white;
+	stroke-width: 2px;
+}
+
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
+
+.focus {
+	circle {
+		fill: none;
+		stroke: rgba(255,255,255,.5);
+		stroke-width: 1.5px;
+	}
+	text {
+		fill: #fff;
+	}
+}
+
+.helper line {
+	fill: none;
+	stroke: rgba(255,255,255,.25);
+	stroke-width: 1px;
+}

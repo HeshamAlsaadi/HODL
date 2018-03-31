@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="Cryptocurrency Trades, Crypto News" />
+    <meta name="Description" content="Cryptocurrency Trades & News" />
+    <meta name="author" content="Hesham H.Alsaadi">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Favicon shortcut link-->
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/splash/favicon.ico" />
+    <!--Declare page as mobile friendly -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Declare page as iDevice WebApp friendly -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/splash/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
+	<meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
+
+    <title>HODL.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- Stock Style -->
+    <link href="css/stock.style.css" rel="stylesheet" />
+
+    <!-- Line Chart Booststarp style -->
+    <link href="css/bootstrap1.min.css" rel="stylesheet" />
+
+    <!-- Stacked Group Chart Style -->
+    <link href="css/stacked.group.style.css" rel="stylesheet" />
+
+    <!-- Line chart style -->
+    <link href="css/linecharttrend.css" rel="stylesheet" />
+
+    <!-- Trend Line style -->
+    <link href="css/trendline.css" rel="stylesheet" />
+
+    <!-- Keen io Dashboard style -->
+    <link rel="stylesheet" type="text/css" href="css/dashbored/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
+
+    <!-- Script for line Chart -->
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/dimple.v2.0.0.min.js"></script>
+
+    <!-- This is the styles of the live trades of cryptocompare.com Please download a copy of the styles to your project files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/cryptowatch.css">
+
+    <!-- This is the script of the javascript library needed for cryptocompare.com You can download the files to your localhost server please change -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- This is the style for the chart container in the index file at the top -->
+    <style>
+        #content {
+        		width: 100%;
+        		height: 100%;
+        	}
+        	#widget {
+        		width: 100%;
+        		height: 100%;
+        	}
+    </style>
+</head>
+
+<body class="application">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+                <a href="./index_dark_main.html"><img src="images/logo44.png"/></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index_dark_charts.html">Real Time Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Crypto Market Trades By tradingview.com
+                    </div>
+                    <div class="chart-stage" style="font-size: 10px; height: 500px;">
+                        <div id="content">
+                            <div id="widget">
+                                <!-- TradingView Widget BEGIN -->
+                                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                <script type="text/javascript">
+                                    new TradingView.widget({
+									  "autosize": true,
+									  "symbol": "BINANCE:BTCUSDT",
+									  "interval": "5",
+									  "timezone": "Etc/UTC",
+									  "theme": "Dark",
+									  "style": "1",
+									  "locale": "en",
+									  "toolbar_bg": "rgba(0, 0, 0, 1)",
+									  "enable_publishing": false,
+									  "allow_symbol_change": true,
+									  "details": true,
+									  "hotlist": true,
+									  "news": [
+										"headlines"
+									  ],
+									  "hideideas": true
+									});
+                                </script>
+                                <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        BTC-USD Market Trades By CryptoCompare.com
+                    </div>
+                    <div class="chart-stage" style="font-size: 10px; height: 250px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Market</th>
+                                    <th>Type</th>
+                                    <th>ID</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="trades">
+                            </tbody>
+                        </table>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <script src="js/ccc-streamer-utilities.js"></script>
+                        <script src="js/stream.js"></script>
+                        <div class="chart-notes">
+                            Source: CryptoCompare
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Bitstamp live orders
+                    </div>
+                    <div class="chart-stage" style="height: 300px">
+                        <ol id="orders_placeholder" style="font-size: 10px;">Processing...</ol>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+                        <script src="js/pusher.min.js"></script>
+                        <script>
+                            $(function() {
+                                var placeholder = $('#orders_placeholder'),
+                                    pusher = new Pusher('de504dc5763aeef9ff52'),
+                                    ordersChannel = pusher.subscribe('live_orders');
+
+                                $.each(['order_created', 'order_changed', 'order_deleted'], function(eventIndex, eventName) {
+                                    ordersChannel.bind(eventName, function(data) {
+                                        if ($('ol li').length > 30) {
+                                            placeholder.find('li:first').remove();
+                                        }
+                                        placeholder.append('<li>[' + eventName + '] (' + data.datetime + ') ' + data.id + ': ' + data.amount + ' BTC @ ' + data.price + ' USD ' + ((data.order_type == 0) ? 'BUY' : 'SELL') + '</li>');
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="chart-notes">
+                        Bitstamp live orders
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Bitstamp live trades
+                    </div>
+                    <div class="chart-stage" style="text-align: justify; height: 300px">
+                        <div id="trades_placeholder" style="font-size: 10px;">Processing...</div>
+                        <script src="js/pusher.min.js"></script>
+                        <script>
+                            var placeholder = document.getElementById('trades_placeholder'),
+                                pusher = new Pusher('de504dc5763aeef9ff52'),
+                                tradesChannel = pusher.subscribe('live_trades'),
+                                child = null,
+                                i = 0;
+
+                            tradesChannel.bind('trade', function(data) {
+                                if (i === 0) {
+                                    placeholder.innerHTML = '';
+                                }
+                                child = document.createElement('div');
+                                child.innerHTML = '(' + data.timestamp + ') ' + data.id + ': ' + data.amount + ' BTC @ ' + data.price + ' USD ' + data.type;
+                                placeholder.appendChild(child);
+                                i++;
+                            });
+                        </script>
+                    </div>
+                    <div class="chart-notes" dir="rtl">
+                        Bitstamp live trades
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Bitstamp order book (Bids)
+                    </div>
+                    <div class="chart-stage" style="font-size: 10px; height: 100px">
+                        <div id="bids_placeholder">Processing...</div>
+                        <script>
+                            $(function() {
+                                var bidsPlaceholder = $('#bids_placeholder'),
+                                    asksPlaceholder = $('#asks_placeholder'),
+                                    pusher = new Pusher('de504dc5763aeef9ff52');
+
+                                $.getJSON('https://www.bitstamp.net/api/order_book/', function(data) {
+                                    var html = '<h2>Bids</h2>',
+                                        i = 0;
+
+                                    for (i = 0; i < 500; i += 1) {
+                                        html = html + '<div class="bid" amount="' + data.bids[i][1] + '" price="' + data.bids[i][0] + '">' + data.bids[i][1] + ' BTC @ ' + data.bids[i][0] + ' USD' + '</div>';
+                                        bidsPlaceholder.html(html);
+                                    }
+
+                                    html = '<h2>Asks</h2>';
+                                    for (i = 0; i < 500; i += 1) {
+                                        html = html + '<div class="ask" amount="' + data.asks[i][1] + '" price="' + data.asks[i][0] + '">' + data.asks[i][1] + ' BTC @ ' + data.asks[i][0] + ' USD' + '</div>';
+                                        asksPlaceholder.html(html);
+                                    }
+                                });
+
+                                var orderBookChannel = pusher.subscribe('diff_order_book');
+
+                                orderBookChannel.bind('data', function(data) {
+                                    var i = 0;
+                                    bidsPlaceholder.innerHTML = '';
+                                    asksPlaceholder.innerHTML = '';
+
+                                    for (i = 0; i < data.bids.length; i += 1) {
+                                        var found = false;
+
+                                        $('#bids_placeholder div.bid').each(function(x, el) {
+                                            var price = parseFloat($(el).attr('price'));
+                                            var amount = parseFloat($(el).attr('amount'));
+
+                                            if (found === false) {
+                                                if (price === parseFloat(data.bids[i][0])) {
+                                                    if (parseFloat(data.bids[i][1]) === 0.0) {
+                                                        $(el).remove();
+                                                    } else {
+                                                        $(el).attr('amount', data.bids[i][1]);
+                                                        $(el).html(data.bids[i][1] + ' BTC @ ' + parseFloat(data.bids[i][0]).toFixed(2) + ' USD')
+                                                    }
+                                                    found = true;
+                                                } else if (price < parseFloat(data.bids[i][0])) {
+                                                    if (parseFloat(data.bids[i][1]) > 0.0) {
+                                                        $(el).before('<div class="bid" amount="' + data.bids[i][1] + '" price="' + data.bids[i][0] + '">' + data.bids[i][1] + ' BTC @ ' + parseFloat(data.bids[i][0]).toFixed(2) + ' USD' + '</div>');
+                                                    }
+                                                    found = true;
+                                                }
+                                            }
+                                        });
+                                    }
+                                    for (i = 0; i < data.asks.length; i += 1) {
+                                        found = false;
+                                        $('#asks_placeholder div.ask').each(function(x, el) {
+                                            var price = parseFloat($(el).attr('price'));
+                                            var amount = parseFloat($(el).attr('amount'));
+
+                                            if (found === false) {
+                                                if (price === parseFloat(data.asks[i][0])) {
+                                                    if (parseFloat(data.asks[i][1]) === 0.0) {
+                                                        $(el).remove();
+                                                    } else {
+                                                        $(el).attr('amount', data.asks[i][1]);
+                                                        $(el).html(data.asks[i][1] + ' BTC @ ' + parseFloat(data.asks[i][0]).toFixed(2) + ' USD')
+                                                    }
+                                                    found = true;
+                                                } else if (price > parseFloat(data.asks[i][0])) {
+                                                    if (parseFloat(data.asks[i][1]) > 0) {
+                                                        $(el).before('<div class="ask" amount="' + data.asks[i][1] + '" price="' + data.asks[i][0] + '">' + data.asks[i][1] + ' BTC @ ' + parseFloat(data.asks[i][0]).toFixed(2) + ' USD' + '</div>');
+                                                    }
+                                                    found = true;
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="chart-notes">
+                        Bitstamp order book (Bids)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Bitstamp order book (Asks)
+                    </div>
+                    <div class="chart-stage" style="font-size: 10px; height: 100px">
+                        <div id="asks_placeholder">Processing...</div>
+                        <script>
+                            $(function() {
+                                var bidsPlaceholder = $('#bids_placeholder'),
+                                    asksPlaceholder = $('#asks_placeholder'),
+                                    pusher = new Pusher('de504dc5763aeef9ff52');
+
+                                $.getJSON('https://www.bitstamp.net/api/order_book/', function(data) {
+                                    var html = '<h2>Bids</h2>',
+                                        i = 0;
+
+                                    for (i = 0; i < 500; i += 1) {
+                                        html = html + '<div class="bid" amount="' + data.bids[i][1] + '" price="' + data.bids[i][0] + '">' + data.bids[i][1] + ' BTC @ ' + data.bids[i][0] + ' USD' + '</div>';
+                                        bidsPlaceholder.html(html);
+                                    }
+
+                                    html = '<h2>Asks</h2>';
+                                    for (i = 0; i < 500; i += 1) {
+                                        html = html + '<div class="ask" amount="' + data.asks[i][1] + '" price="' + data.asks[i][0] + '">' + data.asks[i][1] + ' BTC @ ' + data.asks[i][0] + ' USD' + '</div>';
+                                        asksPlaceholder.html(html);
+                                    }
+                                });
+
+                                var orderBookChannel = pusher.subscribe('diff_order_book');
+
+                                orderBookChannel.bind('data', function(data) {
+                                    var i = 0;
+                                    bidsPlaceholder.innerHTML = '';
+                                    asksPlaceholder.innerHTML = '';
+
+                                    for (i = 0; i < data.bids.length; i += 1) {
+                                        var found = false;
+
+                                        $('#bids_placeholder div.bid').each(function(x, el) {
+                                            var price = parseFloat($(el).attr('price'));
+                                            var amount = parseFloat($(el).attr('amount'));
+
+                                            if (found === false) {
+                                                if (price === parseFloat(data.bids[i][0])) {
+                                                    if (parseFloat(data.bids[i][1]) === 0.0) {
+                                                        $(el).remove();
+                                                    } else {
+                                                        $(el).attr('amount', data.bids[i][1]);
+                                                        $(el).html(data.bids[i][1] + ' BTC @ ' + parseFloat(data.bids[i][0]).toFixed(2) + ' USD')
+                                                    }
+                                                    found = true;
+                                                } else if (price < parseFloat(data.bids[i][0])) {
+                                                    if (parseFloat(data.bids[i][1]) > 0.0) {
+                                                        $(el).before('<div class="bid" amount="' + data.bids[i][1] + '" price="' + data.bids[i][0] + '">' + data.bids[i][1] + ' BTC @ ' + parseFloat(data.bids[i][0]).toFixed(2) + ' USD' + '</div>');
+                                                    }
+                                                    found = true;
+                                                }
+                                            }
+                                        });
+                                    }
+                                    for (i = 0; i < data.asks.length; i += 1) {
+                                        found = false;
+                                        $('#asks_placeholder div.ask').each(function(x, el) {
+                                            var price = parseFloat($(el).attr('price'));
+                                            var amount = parseFloat($(el).attr('amount'));
+
+                                            if (found === false) {
+                                                if (price === parseFloat(data.asks[i][0])) {
+                                                    if (parseFloat(data.asks[i][1]) === 0.0) {
+                                                        $(el).remove();
+                                                    } else {
+                                                        $(el).attr('amount', data.asks[i][1]);
+                                                        $(el).html(data.asks[i][1] + ' BTC @ ' + parseFloat(data.asks[i][0]).toFixed(2) + ' USD')
+                                                    }
+                                                    found = true;
+                                                } else if (price > parseFloat(data.asks[i][0])) {
+                                                    if (parseFloat(data.asks[i][1]) > 0) {
+                                                        $(el).before('<div class="ask" amount="' + data.asks[i][1] + '" price="' + data.asks[i][0] + '">' + data.asks[i][1] + ' BTC @ ' + parseFloat(data.asks[i][0]).toFixed(2) + ' USD' + '</div>');
+                                                    }
+                                                    found = true;
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="chart-notes">
+                        Bitstamp order book (Asks)
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3" style="width: 670px">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Bitstamp Created orders Only
+                    </div>
+                    <div class="chart-stage" style="font-size: 10px; height: 100px;">
+                        <ol id="orders_placeholder1" style="font-size: 10px; width: 500px">Processing...</ol>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+                        <script src="js/pusher.min.js"></script>
+                        <script>
+                            $(function() {
+                                var placeholder = $('#orders_placeholder1'),
+                                    pusher = new Pusher('de504dc5763aeef9ff52'),
+                                    ordersChannel = pusher.subscribe('live_orders');
+
+                                $.each(['order_created'], function(eventIndex, eventName) {
+                                    ordersChannel.bind(eventName, function(data) {
+                                        if ($('ol li').length > 30) {
+                                            placeholder.find('li:first').remove();
+                                        }
+                                        placeholder.append('<li>[' + eventName + '] (' + data.datetime + ') ' + data.id + ': ' + data.amount + ' BTC @ ' + data.price + ' USD ' + ((data.order_type == 0) ? 'BUY' : 'SELL') + '</li>');
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="chart-notes">
+                        Bitstamp Created orders Only
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <p class="small text-muted">Built by Hesham H.Alsaadi</a>
+        </p>
+
+    </div>
+
+    <script type="text/javascript" src="js/dashbored/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/dashbored/holder.js"></script>
+    <script>
+        Holder.add_theme("white", {
+            background: "#fff",
+            foreground: "#a7a7a7",
+            size: 10
+        });
+    </script>
+
+    <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/meta.js"></script>
+
+
+    <!-- Bootstrap core JavaScript For Table
+		================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+
+    <!-- Bootstrap core JavaScript For Table
+				================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+
+    <!--<script type="text/javascript">
+		function format_link(link) {
+			if (link)
+				return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+			else
+				return "";
+		}
+
+		CsvToHtmlTable.init({
+			csv_path: 'data/detail drugs prices by years.csv',
+			element: 'table-container', 
+			allow_download: true,
+			csv_options: {separator: ',', delimiter: '"'},
+			datatables_options: {"scrollCollapse": true,},
+			datatables_options: {"pagingType": "simple_numbers",},
+			custom_formatting: [[1, format_link]]
+		});
+	</script>-->
+    <!-- End of Dynamic Filtered Table ================================================== -->
+
+    <!-- Script for line Chart -->
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/linechart.js"></script>
+    <!-- End of Line Chart ================================================== -->
+</body>
+
+</html>

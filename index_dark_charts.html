@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="Cryptocurrency Trades, Crypto News" />
+    <meta name="Description" content="Cryptocurrency Trades & News" />
+    <meta name="author" content="Hesham H.Alsaadi">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Favicon shortcut link-->
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/splash/favicon.ico" />
+    <!--Declare page as mobile friendly -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Declare page as iDevice WebApp friendly -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/splash/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
+	<meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
+
+    <title>HODL.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- Stock Style -->
+    <link href="css/stock.style.css" rel="stylesheet" />
+
+    <!-- Line Chart Booststarp style -->
+    <link href="css/bootstrap1.min.css" rel="stylesheet" />
+
+    <!-- Stacked Group Chart Style -->
+    <link href="css/stacked.group.style.css" rel="stylesheet" />
+
+    <!-- Line chart style -->
+    <link href="css/linecharttrend.css" rel="stylesheet" />
+
+    <!-- Trend Line style -->
+    <link href="css/trendline.css" rel="stylesheet" />
+
+    <!-- Keen io Dashboard style -->
+    <link rel="stylesheet" type="text/css" href="css/dashbored/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
+
+    <!-- Script for line Chart -->
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/dimple.v2.0.0.min.js"></script>
+
+    <!-- Script for line Chart -->
+    <script type="text/javascript" src="js/zingchart.min.js"></script>
+    <style>
+        #myChart {
+        		  height: 100%;
+        		  width: 100%;
+        		}
+        		#myChart2 {
+        		  height: 100%;
+        		  width: 100%;
+        		}
+    </style>
+</head>
+
+<body class="application">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+                <a href="./"><img src="images/logo44.png"/></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index_dark_main.html">Main</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Real Time Analysis Powered by Cryptowatch
+                    </div>
+                    <div class="chart-stage">
+                        <table>
+                            <tr>
+                                <td class="header-one">
+                                    Time period
+                                    <select id="timePeriod">
+										<option value="1m">1m</option>
+										<option value="3m">3m</option>
+										<option value="5m">5m</option>
+										<option value="15m">15m</option>
+										<option value="30m">30m</option>
+										<option value="1h">1h</option>
+										<option value="2h">2h</option>
+										<option value="4h">4h</option>
+										<option value="6h">6h</option>
+										<option value="12h">12h</option>
+										<option value="1d">1d</option>
+										<option value="3d">3d</option>
+										<option value="1w">1w</option>
+									</select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="one" style="height: 300px; width: 900px"></td>
+                                <td id="two" style="height: 300px; width: 900px"></td>
+                            </tr>
+                            <tr>
+                                <td id="three" style="height: 300px; width: 900px"></td>
+                                <td id="four" style="height: 300px; width: 900px"></td>
+                            </tr>
+                            <tr>
+                                <td id="five" style="height: 300px; width: 900px"></td>
+                                <td id="six" style="height: 300px; width: 900px"></td>
+                            </tr>
+                            <tr>
+                                <td id="seven" style="height: 300px; width: 900px"></td>
+                                <td id="eight" style="height: 300px; width: 900px"></td>
+                            </tr>
+                        </table>
+                        <script type="text/javascript" src="https://static.cryptowat.ch/assets/scripts/embed.bundle.js"></script>
+                        <script type="text/javascript" src="js/script.js"></script>
+                    </div>
+                    <div class="chart-notes">
+                        HODL.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="small text-muted">Built by Hesham H.Alsaadi</a>
+        </p>
+
+    </div>
+
+    <script type="text/javascript" src="js/dashbored/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/dashbored/holder.js"></script>
+    <script>
+        Holder.add_theme("white", {
+        			background: "#fff",
+        			foreground: "#a7a7a7",
+        			size: 10
+        		});
+    </script>
+
+    <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/meta.js"></script>
+</body>
+
+</html>
