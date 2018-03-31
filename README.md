@@ -53,8 +53,9 @@ Setup
 
 - run index_dark_charts.html
 - run index_dark_main.html
-- [Market Trades](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
-- [Real Time Analysis](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
+or
+- [Click Here For Market Trades](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
+- [Clcik Here For Real Time Analysis](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
 
 
 Contribute
