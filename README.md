@@ -50,7 +50,8 @@ Setup
 
 - run index_dark_charts.html
 - run index_dark_main.html
-- Self Login if needed: username: admin, password: admin.
+- [Run Online](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index.html)
+- Self Login: username: admin, password: admin.
 
 
 Contribute
