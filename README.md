@@ -1,3 +1,5 @@
+![HODL.](/docs/logo.png?raw=true)
+
 # HODL
 Cryptocurrency Trades &amp; News
 
