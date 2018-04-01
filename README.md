@@ -37,7 +37,7 @@ Review 8 real time analysis by Cryptowatch.
 - CEX.IO BTCUSD from cex.io ( 1 min reads )
 - Poloniex BTCUSDT from poloniex.com ( 1 min reads)
 
-List your favorite coins using widgets from Coin Market Cap 
+List your favorite coins from CoinMarketCap 
 =========
 
 - Right click with your favorite editor on `index_dark_coinmarketcap.html` and search for `otherCurrencies` and the currency name.
