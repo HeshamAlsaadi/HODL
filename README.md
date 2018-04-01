@@ -59,7 +59,9 @@ var otherCurrencies = [
 	'lisk',
 	'bitshares',
 	'stratis',
+	'lisk',
 	'steem',
+];
 ```
 
 Use cases
