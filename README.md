@@ -37,6 +37,31 @@ Review 8 real time analysis by Cryptowatch.
 - CEX.IO BTCUSD from cex.io ( 1 min reads )
 - Poloniex BTCUSDT from poloniex.com ( 1 min reads)
 
+List your favorite coins using widgets from Coin Market Cap 
+=========
+
+- Right click with your favorite editor on `index_dark_coinmarketcap.html` and search for `otherCurrencies` and the currency name.
+- Example `'litecoin',`.
+
+```javascript
+var otherCurrencies = [
+	'raiblocks',
+	'verge',
+	'cardano',
+	'tron',
+	'nxt',
+	'siacoin',
+	'monero',
+	'nem',
+	'bytecoin-bcn',
+	'iota',
+	'litecoin',
+	'lisk',
+	'bitshares',
+	'stratis',
+	'steem',
+```
+
 Use cases
 =========
 
@@ -44,6 +69,7 @@ Use cases
 - View Bitstamp order book (Bids) and Asks.
 - See some live trades.
 - Real time BTC-USD Market Trades.
+- List your favorite coins from CoinMarketCap.
 
 And much more coming in near updates ex. network traffic visualization, network transcation visualization!
 
