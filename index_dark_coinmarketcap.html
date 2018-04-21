@@ -19,84 +19,57 @@
     <!-- Declare page as iDevice WebApp friendly -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="images/splash/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
-	<meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/splash/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
 
     <title>HODL.</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/dataTables.bootstrap.css" rel="stylesheet" />
-
-    <!-- Stock Style -->
-    <link href="css/stock.style.css" rel="stylesheet" />
-
-    <!-- Line Chart Booststarp style -->
-    <link href="css/bootstrap1.min.css" rel="stylesheet" />
-
-    <!-- Stacked Group Chart Style -->
-    <link href="css/stacked.group.style.css" rel="stylesheet" />
-
-    <!-- Line chart style -->
-    <link href="css/linecharttrend.css" rel="stylesheet" />
-
-    <!-- Trend Line style -->
-    <link href="css/trendline.css" rel="stylesheet" />
 
     <!-- Keen io Dashboard style -->
     <link rel="stylesheet" type="text/css" href="css/dashbored/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
 
-    <!-- Script for line Chart -->
-    <script type="text/javascript" src="js/d3.v3.min.js"></script>
-    <script type="text/javascript" src="js/dimple.v2.0.0.min.js"></script>
+    <!-- Script Line for Coin Market Cap only-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Script for line Chart -->
-    <script type="text/javascript" src="js/zingchart.min.js"></script>
+    <script type="text/javascript" id="cmc-script" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <script>
+        // CONFIG //
+        /*-------------------------------------------------------*/
+        var mainColWidth = 3;
+        var mainCurrencies = ['bitcoin', 'ethereum', 'ripple', 'stellar'];
 
-	<!-- Script Line for Coin Market Cap only-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<script type="text/javascript" id="cmc-script"  src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
-        <script>
-
-            // CONFIG //
-            /*-------------------------------------------------------*/
-            var mainColWidth = 3;
-            var mainCurrencies = [ 'bitcoin', 'ethereum', 'ripple', 'stellar' ];
-
-            var otherColWidth = 3;
-            var otherCurrencies = [
-                'raiblocks',
-                'verge',
-                'cardano',
-                'tron',
-                'nxt',
-                'siacoin',
-                'monero',
-                'nem',
-                'bytecoin-bcn',
-                'iota',
-                'litecoin',
-                'lisk',
-                'bitshares',
-                'stratis',
-                'steem',
-            ];
-            https://docs.google.com/spreadsheets/d/1lnE260-F7TSs6onegSVYgRAP0ZZeuUy2YsfO2Ww_eJY/edit#gid=0&range=A1
+        var otherColWidth = 3;
+        var otherCurrencies = [
+            'raiblocks',
+            'verge',
+            'cardano',
+            'tron',
+            'nxt',
+            'siacoin',
+            'monero',
+            'nem',
+            'bytecoin-bcn',
+            'iota',
+            'litecoin',
+            'lisk',
+            'bitshares',
+            'stratis',
+            'steem',
+        ];
+        https: //docs.google.com/spreadsheets/d/1lnE260-F7TSs6onegSVYgRAP0ZZeuUy2YsfO2Ww_eJY/edit#gid=0&range=A1
             var myCurrencies = {
                 'bitcoin': 1.142001,
                 'ethereum': 1.016501,
@@ -106,61 +79,60 @@
                 'request-network': 456.4560000,
             };
 
-            // CONFIG END //
-            /*-------------------------------------------------------*/
+        // CONFIG END //
+        /*-------------------------------------------------------*/
 
-            function updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies) {
-                $('.main-row').html('');
-                for (var i = 0; i < mainCurrencies.length; i++) {
-                    $('.main-row').append('<div class="coinmarketcap-currency-widget col-md-' + mainColWidth + '" data-currency="' + mainCurrencies[i] + '" data-base="EUR" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="EUR" data-statsticker="false"></div>');
-                }
-
-                $('.other-row').html('');
-                for (var i = 0; i < otherCurrencies.length; i++) {
-                    $('.other-row').append('<div class="coinmarketcap-currency-widget col-md-' + otherColWidth + '" data-currency="' + otherCurrencies[i] + '" data-base="EUR" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="EUR" data-statsticker="false"></div>');
-                }
-
-                $('#cmc-script').replaceWith('<script id="cmc-script" type="text/javascript" src="' + $('#cmc-script').prop('src') + '"><\/script>');
+        function updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies) {
+            $('.main-row').html('');
+            for (var i = 0; i < mainCurrencies.length; i++) {
+                $('.main-row').append('<div class="coinmarketcap-currency-widget col-md-' + mainColWidth + '" data-currency="' + mainCurrencies[i] + '" data-base="EUR" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="EUR" data-statsticker="false"></div>');
             }
 
-            function updateMyCurrencies(myCurrencies) {
-                var total = 0;
-                $('.currencies-list').html('');
-                for (var currency in myCurrencies) {
-                    $.ajax({
-                        url: 'https://api.coinmarketcap.com/v1/ticker/' + currency + '/?convert=EUR',
-                        type: "GET",
-                        dataType: "JSON",
-                        async: false,
-                        success: function(data) {
-                            $('.currencies-list').append('<li data-value="' + ( myCurrencies[currency] * data[0].price_eur ) + '"><u>' + data[0].symbol + '</u> <span style="font-size:11px;">(' + myCurrencies[currency]+ ')</span> = ' + Number(( myCurrencies[currency] * data[0].price_eur ).toFixed(6)) + '</li>');
-                        }
-                    });
-                }
+            $('.other-row').html('');
+            for (var i = 0; i < otherCurrencies.length; i++) {
+                $('.other-row').append('<div class="coinmarketcap-currency-widget col-md-' + otherColWidth + '" data-currency="' + otherCurrencies[i] + '" data-base="EUR" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="EUR" data-statsticker="false"></div>');
+            }
 
-                $( ".currencies-list li" ).each(function( index ) {
-                    total += parseFloat(this.getAttribute('data-value'));
+            $('#cmc-script').replaceWith('<script id="cmc-script" type="text/javascript" src="' + $('#cmc-script').prop('src') + '"><\/script>');
+        }
+
+        function updateMyCurrencies(myCurrencies) {
+            var total = 0;
+            $('.currencies-list').html('');
+            for (var currency in myCurrencies) {
+                $.ajax({
+                    url: 'https://api.coinmarketcap.com/v1/ticker/' + currency + '/?convert=EUR',
+                    type: "GET",
+                    dataType: "JSON",
+                    async: false,
+                    success: function(data) {
+                        $('.currencies-list').append('<li data-value="' + (myCurrencies[currency] * data[0].price_eur) + '"><u>' + data[0].symbol + '</u> <span style="font-size:11px;">(' + myCurrencies[currency] + ')</span> = ' + Number((myCurrencies[currency] * data[0].price_eur).toFixed(6)) + '</li>');
+                    }
                 });
-
-                $('.total').html(Number(total.toFixed(4)) + ' EUR');
             }
 
-            $(document).ready(function () {
-
-                updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies);
-                updateMyCurrencies(myCurrencies);
-
-                window.setInterval(function(){
-                    updateMyCurrencies(myCurrencies);
-                }, 60000);
-
-                window.setInterval(function(){
-                    updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies);
-                }, 300000);
-                
+            $(".currencies-list li").each(function(index) {
+                total += parseFloat(this.getAttribute('data-value'));
             });
-           
-        </script>
+
+            $('.total').html(Number(total.toFixed(4)) + ' EUR');
+        }
+
+        $(document).ready(function() {
+
+            updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies);
+            updateMyCurrencies(myCurrencies);
+
+            window.setInterval(function() {
+                updateMyCurrencies(myCurrencies);
+            }, 60000);
+
+            window.setInterval(function() {
+                updateDashboard(mainColWidth, mainCurrencies, otherColWidth, otherCurrencies);
+            }, 300000);
+
+        });
+    </script>
 </head>
 
 <body class="application">
@@ -169,20 +141,20 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-                <a href="./"><img src="images/logo44.png"/></a>
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="./"><img src="images/logo44.png" /></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index_dark_main.html">Main</a></li>
-					<li><a href="index_dark_coinmarketcap.html">Coin Market Cap</a></li>
+                    <li><a href="index.html">Crypto Market Trades</a></li>
+                    <li><a href="index_dark_coinmarketcap.html">Coin Market Cap</a></li>
                 </ul>
             </div>
         </div>
@@ -194,42 +166,42 @@
             <div class="col-sm-12">
                 <div class="chart-wrapper">
                     <div class="chart-title">
-                       List of coins from CoinMarketCap.com
+                        List of coins from CoinMarketCap.com
                     </div>
                     <div class="chart-stage">
-							  <div class="row">
-                                <div class="row main-row"></div>
-								<div class="row other-row"></div>
-                    </div>
-                    <div class="chart-notes">
-                        HODL.
+                        <div class="row">
+                            <div class="row main-row"></div>
+                            <div class="row other-row"></div>
+                        </div>
+                        <div class="chart-notes">
+                            HODL.
+                        </div>
                     </div>
                 </div>
+
             </div>
+
+            <hr>
+
+            <p class="small text-muted">Built by Hesham H.Alsaadi</a>
+            </p>
 
         </div>
 
-        <hr>
+        <script type="text/javascript" src="js/dashbored/jquery.min.js"></script>
+        <script type="text/javascript" src="js/dashbored/bootstrap.min.js"></script>
 
-        <p class="small text-muted">Built by Hesham H.Alsaadi</a>
-        </p>
+        <script type="text/javascript" src="js/dashbored/holder.js"></script>
+        <script>
+            Holder.add_theme("white", {
+                background: "#fff",
+                foreground: "#a7a7a7",
+                size: 10
+            });
+        </script>
 
-    </div>
-
-    <script type="text/javascript" src="js/dashbored/jquery.min.js"></script>
-    <script type="text/javascript" src="js/dashbored/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="js/dashbored/holder.js"></script>
-    <script>
-        Holder.add_theme("white", {
-        			background: "#fff",
-        			foreground: "#a7a7a7",
-        			size: 10
-        		});
-    </script>
-
-    <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
-    <script type="text/javascript" src="js/dashbored/meta.js"></script>
+        <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
+        <script type="text/javascript" src="js/dashbored/meta.js"></script>
 </body>
 
 </html>
