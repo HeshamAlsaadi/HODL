@@ -79,8 +79,9 @@ And much more coming in near updates ex. network traffic visualization, network 
 Setup
 =====
 
-- [Click Here For Market Trades](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
-- [Clcik Here For Real Time Analysis](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index_dark_main.html)
+- [See Market Trades](https://htmlpreview.github.io/?https://github.com/5998/HODL/blob/master/index.html)
+- [See Real Time Analysis](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_charts.html)
+- [See List of coins from CoinMarketCap](https://htmlpreview.github.io/?https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_coinmarketcap.html)
 
 or
 - Download the repo and run index_dark_charts.html & index_dark_main.html
