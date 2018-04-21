@@ -19,49 +19,26 @@
     <!-- Declare page as iDevice WebApp friendly -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="images/splash/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
-	<meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/splash/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
 
     <title>HODL.</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/dataTables.bootstrap.css" rel="stylesheet" />
-
-    <!-- Stock Style -->
-    <link href="css/stock.style.css" rel="stylesheet" />
-
-    <!-- Line Chart Booststarp style -->
-    <link href="css/bootstrap1.min.css" rel="stylesheet" />
-
-    <!-- Stacked Group Chart Style -->
-    <link href="css/stacked.group.style.css" rel="stylesheet" />
-
-    <!-- Line chart style -->
-    <link href="css/linecharttrend.css" rel="stylesheet" />
-
-    <!-- Trend Line style -->
-    <link href="css/trendline.css" rel="stylesheet" />
 
     <!-- Keen io Dashboard style -->
     <link rel="stylesheet" type="text/css" href="css/dashbored/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
-
-    <!-- Script for line Chart -->
-    <script type="text/javascript" src="js/d3.v3.min.js"></script>
-    <script type="text/javascript" src="js/dimple.v2.0.0.min.js"></script>
 
     <!-- This is the styles of the live trades of cryptocompare.com Please download a copy of the styles to your project files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -83,6 +60,7 @@
         		height: 100%;
         	}
     </style>
+    
 </head>
 
 <body class="application">
@@ -91,19 +69,20 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-                <a href="./index_dark_main.html"><img src="images/logo44.png"/></a>
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="./index.html"><img src="images/logo44.png" alt="Hodl. Logo"/></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index_dark_charts.html">Real Time Analysis</a></li>
+                    <li><a href="index_dark_coinmarketcap.html">Coin Market Cap</a></li>
                 </ul>
             </div>
         </div>
@@ -124,23 +103,23 @@
                                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                                 <script type="text/javascript">
                                     new TradingView.widget({
-									  "autosize": true,
-									  "symbol": "BINANCE:BTCUSDT",
-									  "interval": "5",
-									  "timezone": "Etc/UTC",
-									  "theme": "Dark",
-									  "style": "1",
-									  "locale": "en",
-									  "toolbar_bg": "rgba(0, 0, 0, 1)",
-									  "enable_publishing": false,
-									  "allow_symbol_change": true,
-									  "details": true,
-									  "hotlist": true,
-									  "news": [
-										"headlines"
-									  ],
-									  "hideideas": true
-									});
+                                        "autosize": true,
+                                        "symbol": "BINANCE:BTCUSDT",
+                                        "interval": "5",
+                                        "timezone": "Etc/UTC",
+                                        "theme": "Dark",
+                                        "style": "1",
+                                        "locale": "en",
+                                        "toolbar_bg": "rgba(0, 0, 0, 1)",
+                                        "enable_publishing": false,
+                                        "allow_symbol_change": true,
+                                        "details": true,
+                                        "hotlist": true,
+                                        "news": [
+                                            "headlines"
+                                        ],
+                                        "hideideas": true
+                                    });
                                 </script>
                                 <!-- TradingView Widget END -->
                             </div>
@@ -466,7 +445,6 @@
                 </div>
             </div>
 
-
         </div>
 
         <hr>
@@ -491,28 +469,6 @@
     <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
     <script type="text/javascript" src="js/dashbored/meta.js"></script>
 
-
-    <!-- Bootstrap core JavaScript For Table
-		================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-
-    <!-- Bootstrap core JavaScript For Table
-				================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
-
-    <!-- Script for line Chart -->
-    <script type="text/javascript" src="js/d3.min.js"></script>
-    <script type="text/javascript" src="js/linechart.js"></script>
-    <!-- End of Line Chart ================================================== -->
 </body>
+
 </html>
