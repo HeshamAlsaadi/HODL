@@ -40,7 +40,7 @@ Review 8 real time analysis by Cryptowatch.
 List your favorite coins from CoinMarketCap 
 =========
 
-- Right click with your favorite editor on `index_dark_coinmarketcap.html` and search for `otherCurrencies` and the currency name.
+- Right click with your favorite editor on `index_dark_coinmarketcap.html` and search for `otherCurrencies` add your favorite currency name.
 - Example `'litecoin',`.
 
 ```javascript
