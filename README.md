@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/5998/HODL/badges/gpa.svg)](https://codeclimate.com/github/5998/HODL)
 [![Test Coverage](https://codeclimate.com/github/5998/HODL/badges/coverage.svg)](https://codeclimate.com/github/5998/HODL/coverage)
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/heshamcoins/simple-toolchain-20180410024123481&branch=devBranch)
+[![View via Bluemix](https://bluemix.net/deploy/button.png)](https://hodl.mybluemix.net/)
 
 # HODL
 Cryptocurrency Trades &amp; News
@@ -83,6 +83,9 @@ Setup
 - [See Market Trades](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index.html)
 - [See Real Time Analysis](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_charts.html)
 - [See List of coins from CoinMarketCap](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_coinmarketcap.html)
+
+or
+- View the cloud application via [![View via Bluemix](https://bluemix.net/deploy/button.png)](https://hodl.mybluemix.net/)
 
 or
 - Download the repo and run index_dark_charts.html & index_dark_main.html
