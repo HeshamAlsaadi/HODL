@@ -2,6 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/5998/HODL/badges/gpa.svg)](https://codeclimate.com/github/5998/HODL)
 [![Test Coverage](https://codeclimate.com/github/5998/HODL/badges/coverage.svg)](https://codeclimate.com/github/5998/HODL/coverage)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/heshamcoins/simple-toolchain-20180410024123481&branch=devBranch)
 
 # HODL
 Cryptocurrency Trades &amp; News
