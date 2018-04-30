@@ -12,9 +12,6 @@ What is HODL?
 
 HODL. is preconfigure embedded APIs that displays a comprehensive view of transactions, trades, and analytics from different markets. You can simply configure custom filters to change any generate reads and analysis.
 
-<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_24_52.png" width="500">
-
-
 About The APIs used
 =========
 
@@ -26,6 +23,7 @@ About The APIs used
 - Bitstamp order book (Asks).
 - Bitstamp Created orders Only.
 
+<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_24_52.png" width="500">
 
 Real Time Analysis Powered by Cryptowatch
 =========
