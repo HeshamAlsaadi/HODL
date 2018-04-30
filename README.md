@@ -5,7 +5,7 @@
 [![View via Bluemix](https://bluemix.net/deploy/button.png)](https://hodl.mybluemix.net/)
 
 # HODL
-Cryptocurrency Trades &amp; News
+Cryptocurrency Monitoring & Analysis
 
 What is HODL?
 =======
