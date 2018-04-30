@@ -12,6 +12,9 @@ What is HODL?
 
 HODL. is preconfigure embedded APIs that displays a comprehensive view of transactions, trades, and analytics from different markets. You can simply configure custom filters to change any generate reads and analysis.
 
+<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_24_52.png" width="100%">
+
+
 About The APIs used
 =========
 
