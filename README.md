@@ -23,7 +23,6 @@ About The APIs used
 - Bitstamp order book (Asks).
 - Bitstamp Created orders Only.
 
-<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_24_52.png" width="500">
 
 Real Time Analysis Powered by Cryptowatch
 =========
@@ -90,6 +89,14 @@ or
 
 or
 - Download the repo and run index_dark_charts.html & index_dark_main.html
+
+Screenshots
+=====
+
+<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_24_52.png" width="100%">
+<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_25_41.png" width="100%">
+<img src="https://raw.githubusercontent.com/5998/HODL/master/docs/hodl-2018-04-29-22_26_20.png" width="100%">
+
 
 Contribute
 ==========
