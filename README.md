@@ -64,6 +64,15 @@ var otherCurrencies = [
 	'steem',
 ];
 ```
+News & Podcasts feeds in parallax 
+=========
+
+- coinmastery.
+- cointelegraph.
+- coindesk.
+- unchainedpodcast.
+- chatwithtraders.
+- crypto101podcast.
 
 Use cases
 =========
