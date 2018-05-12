@@ -92,6 +92,7 @@ Setup
 - [See Market Trades](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index.html)
 - [See Real Time Analysis](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_charts.html)
 - [See List of coins from CoinMarketCap](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/index_dark_coinmarketcap.html)
+- [See News & Podcast feeds](https://htmlpreview.github.io/?https://raw.githubusercontent.com/5998/HODL/master/news.html)
 
 or
 - View the cloud application via [![View via Bluemix](https://bluemix.net/deploy/button.png)](https://hodl.mybluemix.net/)
