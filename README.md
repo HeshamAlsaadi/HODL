@@ -1,7 +1,6 @@
 ![HODL.](/docs/logo.png?raw=true)
 
 [![Code Climate](https://codeclimate.com/github/5998/HODL/badges/gpa.svg)](https://codeclimate.com/github/5998/HODL)
-[![Test Coverage](https://codeclimate.com/github/5998/HODL/badges/coverage.svg)](https://codeclimate.com/github/5998/HODL/coverage)
 [![View via Bluemix](https://bluemix.net/deploy/button.png)](https://hodl.mybluemix.net/)
 
 # HODL
