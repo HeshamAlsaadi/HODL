@@ -41,7 +41,8 @@
     <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
 
     <!-- This is the styles of the live trades of cryptocompare.com Please download a copy of the styles to your project files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/cryptowatch.css">
 
@@ -49,28 +50,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120204749-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'UA-120204749-1');
-	</script>
-	
+
     <!-- This is the style for the chart container in the index file at the top -->
     <style>
         #content {
-        		width: 100%;
-        		height: 100%;
-        	}
-        	#widget {
-        		width: 100%;
-        		height: 100%;
-        	}
+            width: 100%;
+            height: 100%;
+        }
+
+        #widget {
+            width: 100%;
+            height: 100%;
+        }
     </style>
-    
 </head>
 
 <body class="application">
@@ -87,13 +79,21 @@
                 <a class="navbar-brand">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
-                <a href="./index.html"><img src="images/logo44.png" alt="Hodl. Logo"/></a>
+                <a href="./index.html">
+                    <img src="images/logo44.png" alt="Hodl. Logo" />
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-				    <li><a href="index.html">Crypto Market Trades</a></li>
-                    <li><a href="index_dark_charts.html">Real Time Analysis</a></li>
-                    <li><a href="index_dark_coinmarketcap.html">Coin Market Cap</a></li>
+                    <li>
+                        <a href="index.html">Crypto Market Trades</a>
+                    </li>
+                    <li>
+                        <a href="index_dark_charts.html">Real Time Analysis</a>
+                    </li>
+                    <li>
+                        <a href="index_dark_coinmarketcap.html">Coin Market Cap</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -102,55 +102,21 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="chart-wrapper">
                     <div class="chart-title">
                         News & Podcast Feeds
                     </div>
                     <div class="chart-stage" style="height: 450px">
-						<div class="feedgrabbr_widget" id="fgid_e0add9925fc7320ec6430a14c"></div>
-						<script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_e0add9925fc7320ec6430a14c");</script>
-						<script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+                        <div class="feedgrabbr_widget" id="fgid_e0add9925fc7320ec6430a14c"></div>
+                        <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_e0add9925fc7320ec6430a14c");</script>
+                        <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
                     </div>
                     <div class="chart-notes">
                         2018
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-sm-6">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Bitstamp live trades
-                    </div>
-                    <div class="chart-stage" style="text-align: justify; height: 300px">
-                        <div id="trades_placeholder" style="font-size: 10px;">Processing...</div>
-                        <script src="js/pusher.min.js"></script>
-                        <script>
-                            var placeholder = document.getElementById('trades_placeholder'),
-                                pusher = new Pusher('de504dc5763aeef9ff52'),
-                                tradesChannel = pusher.subscribe('live_trades'),
-                                child = null,
-                                i = 0;
-
-                            tradesChannel.bind('trade', function(data) {
-                                if (i === 0) {
-                                    placeholder.innerHTML = '';
-                                }
-                                child = document.createElement('div');
-                                child.innerHTML = '(' + data.timestamp + ') ' + data.id + ': ' + data.amount + ' BTC @ ' + data.price + ' USD ' + data.type;
-                                placeholder.appendChild(child);
-                                i++;
-                            });
-                        </script>
-                    </div>
-                    <div class="chart-notes" dir="rtl">
-                        Bitstamp live trades
-                    </div>
-                </div>
-            </div> -->
-
-
         </div>
 
         <hr>
