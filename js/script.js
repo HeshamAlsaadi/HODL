@@ -14,7 +14,7 @@ var charts = [
     ['Bitstamp', 'ethbtc', 'six'],
     ['cexio', 'btcusd', 'seven'],
     ['poloniex', 'btcusd', 'eight'],
-    ['HitBTC', 'btcusd', 'nine'],
+    ['HitBTC', 'BTCUSDT', 'nine'],
     ['HitBTC', 'XRPBTC', 'ten']
 ]
 
