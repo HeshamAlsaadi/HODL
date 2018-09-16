@@ -10,10 +10,11 @@ var charts = [
     ['kraken', 'btcusd', 'two'],
     ['okcoin', 'btccny', 'three'],
     ['okcoin', 'btcusd', 'four'],
-	['GDAX', 'ethbtc', 'five'],
-	['Bitstamp', 'ethbtc', 'six'],
-	['cexio', 'btcusd', 'seven'],
-	['poloniex', 'btcusd', 'eight']
+    ['GDAX', 'ethbtc', 'five'],
+    ['Bitstamp', 'ethbtc', 'six'],
+    ['cexio', 'btcusd', 'seven'],
+    ['poloniex', 'btcusd', 'eight'],
+    ['HitBTC', 'btcusd', 'nine']
 ]
 
 // create all charts
