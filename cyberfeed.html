@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="Cyber Feed, Cyber News" />
+    <meta name="Description" content="Cyber Feed & News" />
+    <meta name="author" content="Hesham H.Alsaadi">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Favicon shortcut link-->
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/splash/favicon.ico" />
+    <!--Declare page as mobile friendly -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- Declare page as iDevice WebApp friendly -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/splash/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/splash/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/splash/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/splash/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/splash/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/splash/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/splash/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/splash/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/splash/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/splash/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/splash/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/splash/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/splash/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="images/splash/ms-icon-144x144.png">
+
+    <title>CYBER FEED.</title>
+
+    <!-- Keen io Dashboard style -->
+    <link rel="stylesheet" type="text/css" href="css/dashbored/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashbored/keen-dashboards.css" />
+
+    <!-- This is the styles of the live trades of cryptocompare.com Please download a copy of the styles to your project files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/cryptowatch.css">
+
+    <!-- This is the script of the javascript library needed for cryptocompare.com You can download the files to your localhost server please change -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Firebase Notification System -->
+	<script src="firebase-messaging-sw.js"></script>
+
+
+    <!-- This is the style for the chart container in the index file at the top -->
+    <style>
+        #content {
+            width: 100%;
+            height: 100%;
+        }
+
+        #widget {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="application">
+
+    <div id="token"></div>
+    <div id="msg"></div>
+    <div id="notis"></div>
+    <div id="err"></div>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        MsgElem = document.getElementById("msg");
+        TokenElem = document.getElementById("token");
+        NotisElem = document.getElementById("notis");
+        ErrElem = document.getElementById("err");
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+            apiKey: "AIzaSyBlVhhbSiJTspoT49G_asRPasEWJ-qI8wE",
+            authDomain: "cyberfeed-6a596.firebaseapp.com",
+            databaseURL: "https://cyberfeed-6a596.firebaseio.com",
+            storageBucket: "cyberfeed-6a596.appspot.com",
+            messagingSenderId: "946736700126",
+        };
+        firebase.initializeApp(config);
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()
+            .then(function () {
+                MsgElem.innerHTML = "Notification permission granted." 
+                console.log("Notification permission granted.");
+                
+                // get the token in the form of promise
+                return messaging.getToken()
+            })
+            .then(function(token) {
+                TokenElem.innerHTML = "token is : " + token
+            })
+            .catch(function (err) {
+                ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
+                console.log("Unable to get permission to notify.", err);
+            });
+        messaging.onMessage(function(payload) {
+            console.log("Message received. ", payload);
+            NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload) 
+        });
+    </script>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="./index.html">
+                    <img src="images/logo44.png" alt="CYBER FEED. Logo" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="Podcasts.html">Podcasts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        News Feeds
+                    </div>
+                    <div class="chart-stage" style="height: 600px">
+                        <div class="feedgrabbr_widget" id="fgid_5fd13eabe857cdbaa148be878"></div>
+						<script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_5fd13eabe857cdbaa148be878");</script>
+						<script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+                    </div>
+                    <div class="chart-notes">
+                        2019
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p class="small text-muted">Built by Hesham H.Alsaadi</a>
+        </p>
+
+    </div>
+
+    <script type="text/javascript" src="js/dashbored/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/dashbored/holder.min.js"></script>
+    <script>
+        Holder.add_theme("white", {
+            background: "#fff",
+            foreground: "#a7a7a7",
+            size: 10
+        });
+    </script>
+
+    <script type="text/javascript" src="js/dashbored/keen.min.js"></script>
+    <script type="text/javascript" src="js/dashbored/meta.js"></script>
+
+</body>
+
+</html>
